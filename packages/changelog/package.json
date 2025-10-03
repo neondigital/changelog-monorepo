@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx tailwindcss -i resources/css/changelog.css -o resources/dist/changelog.css --postcss --watch",
+    "build": "npx tailwindcss -i resources/css/changelog.css -o resources/dist/changelog.css --postcss --minify && npm run purge"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}

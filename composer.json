@@ -1,0 +1,20 @@
+{
+    "name": "neondigital/neon-changelog",
+    "description": "A changelog package for Laravel",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Alec Ritson",
+            "email": "alec@neondigital.co.uk"
+        }
+    ],
+    "require-dev": {
+        "symplify/monorepo-builder": "^12.2"
+    },
+    "replace": {
+        "neondigital/changelog": "self.version"
+    },
+    "version": "0.0.1",
+    "minimum-stability": "stable"
+}
