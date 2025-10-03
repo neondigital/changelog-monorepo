@@ -3,18 +3,40 @@
     "description": "A changelog package for Laravel",
     "license": "MIT",
     "type": "library",
+    "version": "0.0.1",
     "authors": [
         {
             "name": "Alec Ritson",
             "email": "alec@neondigital.co.uk"
         }
     ],
+    "require": {
+        "filament/filament": "^3.3.36",
+        "laravel/framework": "^v11.45|^12.32",
+        "spatie/laravel-data": "^3.6",
+        "spatie/laravel-markdown": "^2.7",
+        "spatie/yaml-front-matter": "^2.1"
+    },
     "require-dev": {
         "symplify/monorepo-builder": "^12.2"
     },
     "replace": {
-        "neondigital/changelog": "self.version"
+        "neondigital/changelog": "self.version",
+        "neondigital/changelog-filament": "self.version"
     },
-    "version": "0.0.1",
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Neondigital\\ChangelogFilament\\": "packages/changelog-filament/src/",
+            "Neondigital\\Changelog\\": "packages/changelog/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Neondigital\\ChangelogFilament\\ChangelogFilamentServiceProvider",
+                "Neondigital\\Changelog\\ChangelogServiceProvider"
+            ]
+        }
+    }
 }
